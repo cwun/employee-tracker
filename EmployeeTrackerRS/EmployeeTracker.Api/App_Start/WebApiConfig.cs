@@ -31,13 +31,14 @@ namespace EmployeeTracker.Api
                 defaults: new { id = RouteParameter.Optional }
             );
 
-            var builder = new ContainerBuilder(); // yes, it is a different container here
+            /*** Autoface: Build the container ***/
+            var builder = new ContainerBuilder(); 
 
             // register Web API Controllers
             builder.RegisterAssemblyTypes(Assembly.GetExecutingAssembly());
 
-            // register your graph - shared
-            builder.RegisterModule(new StandardModule()); // same as with ASP.NET MVC Controllers
+            // register your classes and expose their interfaces - shared
+            builder.RegisterModule(new StandardModule()); 
 
             var container = builder.Build();
             config.DependencyResolver = new AutofacWebApiDependencyResolver(container);
