@@ -20,8 +20,10 @@ namespace EmployeeTracker.Services.Employees
 
         public async Task<IEnumerable<Employee>> GetEmployeesAsync()
         {
+            // execute the stored procedure called GetEmployees
             return await _repo.WithConnection(async c =>
             {
+                // map the result from stored procedure to Employee data model
                 var results = await c.QueryAsync<Employee>("GetEmployees", commandType: CommandType.StoredProcedure);
                 return results;
             });

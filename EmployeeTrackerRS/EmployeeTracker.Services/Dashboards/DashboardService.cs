@@ -12,7 +12,7 @@ namespace EmployeeTracker.Services.Dashboards
 {
     public class DashboardService: IDashboardService
     {
-    private readonly IRepository _repo;
+        private readonly IRepository _repo;
 
         public DashboardService(IRepository repo)
         {
@@ -23,7 +23,9 @@ namespace EmployeeTracker.Services.Dashboards
         {
             return await _repo.WithConnection(async c =>
             {
+                // execute the stored procedure called GetDashboardSetting
                 var reader = await c.QueryMultipleAsync("GetDashboardSetting", commandType: CommandType.StoredProcedure);
+                // map the result from stored procedure to Dashboard data model
                 var results = new Dashboard
                 {
                     TotalPositions = reader.ReadAsync<int>().Result.SingleOrDefault(),

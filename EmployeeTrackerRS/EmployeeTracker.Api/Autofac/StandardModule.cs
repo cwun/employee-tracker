@@ -13,7 +13,7 @@ namespace EmployeeTracker.Api.Autofac
         {
             base.Load(builder);
 
-            // obtain conn string once and reuse for all required
+            // obtain database connection string once and reuse by Connection class
             var conn = ConfigurationManager.ConnectionStrings["DBConnection"];
 
             // Register Connection class and expose IConnection 

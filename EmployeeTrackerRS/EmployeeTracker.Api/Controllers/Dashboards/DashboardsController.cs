@@ -18,7 +18,7 @@ namespace EmployeeTracker.Api.Controllers.Dashboards
         [Route("")]
         [HttpGet]
         [ResponseType(typeof (IDashboard))]
-        public async Task<IHttpActionResult> GetEmployees()
+        public async Task<IHttpActionResult> GetDashboardSetting()
         {
             var result = await _service.GetDashboardSettingAsync();
             return Ok(result);

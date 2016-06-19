@@ -22,6 +22,7 @@ namespace EmployeeTracker.Api
             // Web API routes
             config.MapHttpAttributeRoutes();
 
+            // use camel case for JSON data
             config.Formatters.JsonFormatter.SerializerSettings.ContractResolver =
               new CamelCasePropertyNamesContractResolver();
 
@@ -31,7 +32,7 @@ namespace EmployeeTracker.Api
                 defaults: new { id = RouteParameter.Optional }
             );
 
-            /*** Autoface: Build the container ***/
+            /*** Autofac: Build the container ***/
             var builder = new ContainerBuilder(); 
 
             // register Web API Controllers
