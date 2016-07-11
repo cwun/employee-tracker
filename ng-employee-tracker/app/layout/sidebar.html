@@ -1,24 +1,128 @@
-<nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="margin-bottom: 0">
-    <!-- Brand and toggle get grouped for better mobile display -->
+<nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+    <!-- navbar-header -->
     <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="index.html">Employee Tracker</a><br/>
+        <a class="navbar-brand" href="index.html">Employee Tracker</a>
     </div>
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse navbar-ex1-collapse">
-        <ul class="nav navbar-nav side-nav navbar-default">
-            <li ui-sref-active="active">
-                <a ui-sref="home.dashboard"><i class="fa fa-dashboard"></i> <span class="nav-label">Dashboard</span></a>
-            </li>
+    <!-- /.navbar-header -->
 
-            <li ui-sref-active="active">
-                <a ui-sref="home.employees"><i class="fa fa-table"></i> <span class="nav-label">Employees</span></a>
-            </li>
-        </ul>
-    </div><!-- /.navbar-collapse -->
+    <!-- navbar-top-links -->
+    <ul class="nav navbar-top-links navbar-right">
+        <!-- dropdown envelope icon -->
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                <i class="fa fa-envelope fa-fw"></i>  <i class="fa fa-caret-down"></i>
+            </a>
+            <!-- dropdown-messages -->
+            <ul class="dropdown-menu dropdown-messages">
+                <li>
+                    <div class="text-center small">
+                        <strong>You have 4 tutorials</strong>
+                    </div>
+                </li>
+                <li class="divider"></li>
+                <li>
+                    <a href="http://www.cc28tech.com/employee-tracker-angularjs-web-api-part-1" target="_blank">
+                        <div class="small">
+                            <strong>Part 1: </strong>
+                            <span class="text-info">
+                                Create a Web API Application in C#
+                            </span>
+                        </div>
+                    </a>
+                </li>
+                <li class="divider"></li>
+                <li>
+                    <a href="http://www.cc28tech.com/employee-tracker-angularjs-web-api-part-2" target="_blank">
+                        <div class="small">
+                            <strong>Part 2: </strong>
+                            <span class="text-info">
+                                Create Web API Services
+                            </span>
+                        </div>
+                    </a>
+                </li>
+                <li class="divider"></li>
+                <li>
+                    <a href="http://www.cc28tech.com/employee-tracker-angularjs-web-api-part-3" target="_blank">
+                        <div class="small">
+                            <strong>Part 3: </strong>
+                            <span class="text-info">
+                                Create a SPA in AngularJS
+                            </span>
+                        </div>
+                    </a>
+                </li>
+                <li class="divider"></li>
+                <li>
+                    <a href="http://www.cc28tech.com/employee-tracker-angularjs-web-api-part-4" target="_blank">
+                        <div class="small">
+                            <strong>Part 4: </strong>
+                            <span class="text-info">
+                                Create Features in AngularJS
+                            </span>
+                        </div>
+                    </a>
+                </li>
+                <li class="divider"></li>
+                <li>
+                    <a class="text-center text-info small" href="http://www.cc28tech.com" target="_blank">
+                        <div class="text-info">
+                            <strong>See Other Tutorials</strong>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <!-- /.dropdown-messages -->
+        </li>
+        <!-- /.dropdown envelope icon -->
+        <!-- dropdown user icon -->
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
+            </a>
+            <!-- dropdown-user -->
+            <ul class="dropdown-menu dropdown-user">
+                <li>
+                    <a href="http://www.cc28tech.com/about-me" target="_blank">
+                        <div class="text-center small">
+                            <i class="fa fa-user fa-fw"></i> <span class="text-info"><strong>About Me</strong></span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <!-- /.dropdown-user -->
+        </li>
+        <!-- /.dropdown user icon -->
+    </ul>
+    <!-- /.navbar-top-links -->
+
+    <!-- navbar-static-side -->
+    <div class="navbar-default sidebar" role="navigation">
+        <!-- sidebar-collapse -->
+        <div class="sidebar-nav navbar-collapse">
+            <ul class="nav" id="side-menu">
+                <li ui-sref-active="active">
+                    <a ui-sref="home.dashboard">
+                        <i class="fa fa-dashboard"></i>
+                        <span class="nav-label">Dashboard</span>
+                    </a>
+                </li>
+
+                <li ui-sref-active="active">
+                    <a ui-sref="home.employees">
+                        <i class="fa fa-table"></i>
+                        <span class="nav-label">Employees</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.sidebar-collapse -->
+    </div>
+    <!-- /.navbar-static-side -->
 </nav>

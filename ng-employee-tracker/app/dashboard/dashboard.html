@@ -1,19 +1,20 @@
 <div class="template animated slideInRight">
     <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <h1>Dashboard <small>Statistics Overview</small></h1>
+        <div class="col-lg-12">
+            <h1>{{vm.title}} <small>Statistics Overview</small></h1>
             <ol class="breadcrumb">
-                <li class="active"><i class="fa fa-dashboard"></i> Dashboard</li>
+                <li class="active"><i class="fa fa-dashboard"></i> {{vm.title}}</li>
             </ol>
             <div class="alert alert-success alert-dismissable">
-                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
                 <i class="fa fa-info-circle"></i><strong> Like Employee Tracker?</strong> Make sure you check out other tutorials in <a class="alert-link" href="http://cc28tech.com" target="_blank">Cathy Wun's Blog</a>!
             </div>
         </div>
     </div><!-- /.row -->
-
+ 
     <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+        <!-- Total Positions Area -->
+        <div class="col-md-4 col-lg-4">
             <div class="panel panel-warning">
                 <div class="panel-heading">
                     <div class="row">
@@ -28,7 +29,9 @@
                 </div>
             </div>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+        <!-- End Total Positions Area -->
+        <!-- Total Offices Area -->
+        <div class="col-md-4 col-lg-4">
             <div class="panel panel-danger">
                 <div class="panel-heading">
                     <div class="row">
@@ -43,7 +46,9 @@
                 </div>
             </div>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+        <!-- End Total Offices Area -->
+        <!-- Total Employees Area -->
+        <div class="col-md-4 col-lg-4">
             <div class="panel panel-info">
                 <div class="panel-heading">
                     <div class="row">
@@ -58,10 +63,12 @@
                 </div>
             </div>
         </div>
+        <!-- End Total Employees Area -->
     </div><!-- /.row -->
-
+ 
     <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+        <!-- Bar chart of Historical Growth Statistics Area -->
+        <div class="col-lg-6">
             <div class="panel panel-primary">
                 <div class="panel-heading">
                     <h3 class="panel-title"><i class="fa fa-bar-chart-o"></i> Historial Growth Statistics</h3>
@@ -71,7 +78,9 @@
                 </div>
             </div>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+        <!-- End Bar chart of Historical Growth Statistics Area -->
+        <!-- Pie chart of Office Statistics Area -->
+        <div class="col-lg-6">
             <div class="panel panel-primary">
                 <div class="panel-heading">
                     <h3 class="panel-title"><i class="fa fa-bar-chart-o"></i> Offices Statistics</h3>
@@ -81,6 +90,9 @@
                 </div>
             </div>
         </div>
+        <!-- End Pie chart of Office Statistics Area -->
     </div><!-- /.row -->
 </div>
 
+<!-- Close the Splash screen -->
+<script src="content/js/loading-bars.js"></script>

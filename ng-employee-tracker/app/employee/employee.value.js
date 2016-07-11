@@ -1,10 +1,10 @@
 (function () {
     'use strict';
-
+ 
     angular
         .module('employeeApp')
         .value('EmployeeModel', EmployeeModel);
-
+ 
     function EmployeeModel() {
         this.id = 0;
         this.name = '';
@@ -15,7 +15,7 @@
         this.startDate = '';
         this.salary = '';
     }
-
+ 
     EmployeeModel.prototype = {
         toObject: function (data) {
             this.id = data.id;
@@ -29,6 +29,5 @@
             return this;
         }
     }
-
+ 
 })();
-

@@ -1,18 +1,17 @@
-<!-- Wrapper-->
 <div id="wrapper">
 
-    <!-- Navigation -->
+    <!-- Navigation Area -->
     <div ng-include="'app/layout/sidebar.html'"></div>
+    <!-- End Navigation Area -->
 
-    <!-- Page wrapper -->
+    <!-- Content Area -->
     <!-- ng-class with current state name give you the ability to extended customization your view -->
     <div id="page-wrapper" class="gray-bg {{$state.current.name}}">
 
-        <!-- Main view  -->
+        <!-- Nested view  -->
         <div ui-view></div>
 
     </div>
-    <!-- End page wrapper-->
+    <!-- End Content Area -->
 
 </div>
-<!-- End wrapper-->

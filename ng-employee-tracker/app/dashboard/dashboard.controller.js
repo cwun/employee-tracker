@@ -1,29 +1,22 @@
 (function () {
     'use strict';
-
+ 
     angular
         .module('employeeApp')
         .controller('DashboardController', DashboardController);
-
-    DashboardController.$inject = ['$scope', 'initialData'];
-
-    function DashboardController($scope, initialData) {
+ 
+    DashboardController.$inject = ['initialData'];
+ 
+    function DashboardController(initialData) {
         var vm = this;
-
+ 
         vm.title = 'Dashboard';
-
-        vm.employees = initialData.totalEmployees;
+        /* Initialize vm.* bindable members with initialData.* members */
         vm.positions = initialData.totalPositions;
         vm.offices = initialData.totalOffices;
-
-        activate();
-
-        ////////////////
-
-        function activate() {
-            console.log(vm.title + ' loaded!');
-        }
-
+        vm.employees = initialData.totalEmployees;
+ 
+        // Configure options for the bar chart
         vm.lineChartOptions = {
             chart: {
                 type: 'historicalBarChart',
@@ -47,14 +40,16 @@
                 showLegend: false
             }
         };
-
+ 
+        // Bind data to the bar chart
         vm.lineChartData = [{
             values: initialData.employeesPerYear,
             color: '#7777ff',
             area: true
-
+ 
         }];
-
+ 
+        // Configure options for the pie chart
         vm.pieChartOptions = {
             chart: {
                 type: 'pieChart',
@@ -78,8 +73,17 @@
                 }
             }
         };
-
+ 
+        // Bind data to the pie chart
         vm.pieChartData = initialData.employeesPerOffice;
 
+        activate();
+ 
+        ////////////////
+ 
+        function activate() {
+            console.log(vm.title + ' loaded!');
+        }
+ 
     }
 })();
