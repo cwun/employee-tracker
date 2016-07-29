@@ -327,7 +327,7 @@
         "sex": "F",
         "age": 22,
         "startDate": "2015-09-15",
-        "salary": "$163,000"
+        "salary": 163000
     },
     {
         "id": 31,
@@ -364,7 +364,8 @@
     },
     {
         "id": 34,
-        "Name": "Gavin Cortez",
+        "firstName": "Gavin",
+        "lastName": "Cortez",
         "position": "Technical Leader",
         "office": "San Francisco",
         "sex": "M",
