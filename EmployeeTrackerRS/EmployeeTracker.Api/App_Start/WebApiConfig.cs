@@ -14,10 +14,9 @@ namespace EmployeeTracker.Api
         {
             // Web API configuration and services
 
-            /* Allow Cross Domain Access
-            var cors = new EnableCorsAttribute("http://employee-tracker.azurewebsites.net", "*", "*");
+            /* Allow Cross Domain Access */
+            var cors = new EnableCorsAttribute("*", "*", "*");
             config.EnableCors(cors);
-            */
 
             // Web API routes
             config.MapHttpAttributeRoutes();
