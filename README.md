@@ -1,8 +1,6 @@
 # Tutorials on building an Employee Tracker with AngularJS and Web API
 
-This simple Employee Tracker provides users the ability to track important activities ranging from human resources to operations.
-
-#### [Demo site](http://employee-tracker.azurewebsites.net)
+ThisÂ simple Employee Tracker providesÂ users the ability to trackÂ important activities rangingÂ from human resourcesÂ to operations.
 
 <b>*** Dashboard ***</b>
 ![Picture](https://github.com/cwun/employee-tracker/blob/master/screen-dashboard.png)
